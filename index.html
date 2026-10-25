@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="خدمات تنظيف خزانات المياه وتركيب الفلاتر وتنظيف الكنب والسجاد في السبع إمارات. اتصل الآن."
+    />
+    <meta name="theme-color" content="#073f43" />
+    <title>خدمات المياه والتنظيف | السبع إمارات</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #143c3d;
+        --muted: #647b79;
+        --teal: #087f78;
+        --deep: #073f43;
+        --mint: #a9e6d1;
+        --paper: #f4f8f5;
+        --white: #fff;
+        --line: #e3ece7;
+        --shadow: 0 26px 80px rgb(9 61 59 / 16%);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        padding: 34px 18px;
+        display: grid;
+        place-items: center;
+        color: var(--ink);
+        background:
+          radial-gradient(ellipse at 11% 7%, rgb(174 226 205 / 42%), transparent 29rem),
+          radial-gradient(ellipse at 93% 88%, rgb(181 224 218 / 42%), transparent 25rem),
+          var(--paper);
+        font-family:
+          Tahoma, Arial, "Segoe UI", sans-serif;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .flyer {
+        position: relative;
+        width: min(100%, 720px);
+        overflow: hidden;
+        border: 1px solid rgb(255 255 255 / 78%);
+        border-radius: 30px;
+        background: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .top {
+        position: relative;
+        overflow: hidden;
+        padding: 32px 38px 36px;
+        color: var(--white);
+        background:
+          radial-gradient(circle at 88% 12%, rgb(158 230 207 / 20%) 0 4px, transparent 5px),
+          radial-gradient(circle at 78% 30%, rgb(158 230 207 / 15%) 0 8px, transparent 9px),
+          radial-gradient(circle at 96% 44%, rgb(158 230 207 / 12%) 0 13px, transparent 14px),
+          linear-gradient(135deg, #07565a 0%, #073f43 56%, #082f37 100%);
+      }
+
+      .top::before,
+      .top::after {
+        position: absolute;
+        content: "";
+        pointer-events: none;
+        border: 1px solid rgb(169 230 209 / 17%);
+        border-radius: 50%;
+      }
+
+      .top::before {
+        width: 255px;
+        height: 255px;
+        top: -136px;
+        left: -40px;
+      }
+
+      .top::after {
+        width: 325px;
+        height: 325px;
+        top: -174px;
+        left: -75px;
+      }
+
+      .top-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        margin-bottom: 32px;
+        color: #c3f1dc;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .brand-mark {
+        width: 32px;
+        height: 32px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgb(195 241 220 / 38%);
+        border-radius: 11px;
+        background: rgb(195 241 220 / 10%);
+      }
+
+      .location {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 7px 12px;
+        border: 1px solid rgb(195 241 220 / 28%);
+        border-radius: 999px;
+        color: #d6f6e8;
+        background: rgb(255 255 255 / 7%);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .location svg {
+        flex: 0 0 auto;
+      }
+
+      h1 {
+        max-width: 510px;
+        margin: 17px 0 12px;
+        font-size: clamp(30px, 6.2vw, 49px);
+        line-height: 1.34;
+        letter-spacing: -0.045em;
+      }
+
+      h1 span {
+        color: #9fe4c4;
+      }
+
+      .intro {
+        max-width: 460px;
+        margin: 0;
+        color: #d0e7df;
+        font-size: 15px;
+        line-height: 1.95;
+      }
+
+      .watermark {
+        position: absolute;
+        width: 142px;
+        height: 142px;
+        bottom: -24px;
+        left: 28px;
+        opacity: 0.13;
+        transform: rotate(-14deg);
+      }
+
+      .content {
+        padding: 30px 38px 32px;
+      }
+
+      .eyebrow {
+        margin: 0 0 9px;
+        color: var(--teal);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.5;
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .service {
+        min-height: 144px;
+        padding: 17px 15px;
+        border: 1px solid var(--line);
+        border-radius: 17px;
+        background: #fbfdfb;
+      }
+
+      .service-icon {
+        width: 39px;
+        height: 39px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 13px;
+        border-radius: 13px;
+        color: var(--teal);
+        background: #e8f6ef;
+      }
+
+      .service h3 {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 17px;
+        margin: 23px 0 25px;
+        padding: 17px 0 0;
+        border-top: 1px solid var(--line);
+        list-style: none;
+      }
+
+      .features li {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        color: #466360;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .check {
+        width: 19px;
+        height: 19px;
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        color: var(--teal);
+        background: #e4f5ec;
+      }
+
+      .contact {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 18px 20px;
+        border: 1px solid #dcece4;
+        border-radius: 20px;
+        background: linear-gradient(110deg, #f1faf5, #f8fbf8);
+      }
+
+      .contact-copy {
+        min-width: 0;
+      }
+
+      .contact-label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .phone {
+        direction: ltr;
+        display: inline-block;
+        color: var(--deep);
+        font-size: 23px;
+        font-weight: 800;
+        letter-spacing: 0.035em;
+        text-decoration: none;
+      }
+
+      .actions {
+        display: flex;
+        flex: 0 0 auto;
+        gap: 9px;
+      }
+
+      .button {
+        min-height: 46px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 0 15px;
+        border: 0;
+        border-radius: 13px;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 800;
+        text-decoration: none;
+        transition:
+          transform 180ms ease,
+          background-color 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      .button:focus-visible,
+      .phone:focus-visible,
+      .designer:focus-visible {
+        outline: 3px solid #54bd9f;
+        outline-offset: 4px;
+      }
+
+      .button-call {
+        color: var(--white);
+        background: var(--deep);
+        box-shadow: 0 7px 16px rgb(7 63 67 / 15%);
+      }
+
+      .button-call:hover {
+        background: #0b5758;
+      }
+
+      .button-wa {
+        color: #fff;
+        background: #168553;
+      }
+
+      .button-wa:hover {
+        background: #106d43;
+      }
+
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 24px;
+        color: #82928d;
+        font-size: 11px;
+      }
+
+      .designer {
+        color: #466360;
+        font-weight: 700;
+        text-decoration-color: #97c8b2;
+        text-underline-offset: 3px;
+      }
+
+      .copyright {
+        white-space: nowrap;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 18px 12px;
+        }
+
+        .flyer {
+          border-radius: 23px;
+        }
+
+        .top {
+          padding: 25px 23px 29px;
+        }
+
+        .brand {
+          margin-bottom: 27px;
+        }
+
+        .content {
+          padding: 25px 22px 25px;
+        }
+
+        .services {
+          grid-template-columns: 1fr;
+          gap: 9px;
+          margin-top: 16px;
+        }
+
+        .service {
+          min-height: 0;
+          display: flex;
+          align-items: center;
+          gap: 13px;
+          padding: 12px 14px;
+        }
+
+        .service-icon {
+          width: 41px;
+          height: 41px;
+          flex: 0 0 auto;
+          margin: 0;
+        }
+
+        .features {
+          gap: 11px 15px;
+          margin: 19px 0 21px;
+        }
+
+        .contact {
+          align-items: stretch;
+          flex-direction: column;
+          gap: 15px;
+          padding: 16px;
+        }
+
+        .phone {
+          font-size: 22px;
+        }
+
+        .actions {
+          width: 100%;
+        }
+
+        .button {
+          flex: 1;
+          padding: 0 10px;
+        }
+
+        .footer {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 9px;
+          margin-top: 19px;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .top {
+          padding-inline: 19px;
+        }
+
+        .content {
+          padding-inline: 17px;
+        }
+
+        .button {
+          gap: 5px;
+          font-size: 12px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="flyer">
+      <header class="top">
+        <div class="top-content">
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="19" height="19" fill="none">
+                <path d="M12 2.8S5.2 10.1 5.2 15a6.8 6.8 0 0 0 13.6 0C18.8 10.1 12 2.8 12 2.8Z" stroke="currentColor" stroke-width="1.8" />
+                <path d="M8.8 15.3a3.4 3.4 0 0 0 3.4 3.4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" />
+              </svg>
+            </span>
+            خدمات المياه والتنظيف
+          </div>
+
+          <div>
+            <span class="location">
+              <svg viewBox="0 0 18 18" width="15" height="15" fill="none" aria-hidden="true">
+                <path d="M9 16s5.2-4.9 5.2-9A5.2 5.2 0 0 0 3.8 7c0 4.1 5.2 9 5.2 9Z" stroke="currentColor" stroke-width="1.5" />
+                <circle cx="9" cy="7" r="1.8" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+              نخدم منطقة السبع إمارات
+            </span>
+          </div>
+
+          <h1>نظافة تريحك،<br /><span>ومياه تثق بها.</span></h1>
+          <p class="intro">
+            خدمات منزلية للعناية بالخزانات والمياه والأثاث، باهتمام بالتفاصيل
+            وخدمة تناسب احتياجك.
+          </p>
+        </div>
+
+        <svg class="watermark" viewBox="0 0 160 160" fill="none" aria-hidden="true">
+          <path d="M80 12S31 65 31 100a49 49 0 0 0 98 0c0-35-49-88-49-88Z" stroke="#a9e6d1" stroke-width="5" />
+          <path d="M58 101a22 22 0 0 0 22 22" stroke="#a9e6d1" stroke-linecap="round" stroke-width="5" />
+        </svg>
+      </header>
+
+      <section class="content" aria-labelledby="services-title">
+        <p class="eyebrow">خدماتنا</p>
+        <h2 id="services-title">كل ما يحتاجه بيتك في مكان واحد</h2>
+
+        <div class="services">
+          <article class="service">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M4 8h16v11H4zM7 8V5h10v3M8 12h8M8 15h5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" />
+                <path d="M18 3v2m-3-1v2" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" />
+              </svg>
+            </span>
+            <h3>تنظيف خزانات المياه</h3>
+          </article>
+
+          <article class="service">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M6 4h12v16H6zM9 8h6M9 12h6M9 16h3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" />
+                <path d="M4 8v8m16-8v8" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" />
+              </svg>
+            </span>
+            <h3>تركيب فلاتر المياه</h3>
+          </article>
+
+          <article class="service">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M4 12V9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8H4v-5Zm0 0h16M7 17v2m10-2v2M8 11V9m8 2V9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" />
+              </svg>
+            </span>
+            <h3>تنظيف الكنب والسجاد</h3>
+          </article>
+        </div>
+
+        <ul class="features" aria-label="مميزات الخدمة">
+          <li>
+            <span class="check" aria-hidden="true">
+              <svg viewBox="0 0 16 16" width="12" height="12" fill="none"><path d="m3.5 8.2 2.8 2.7 6.2-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
+            </span>
+            عناية بالتفاصيل
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">
+              <svg viewBox="0 0 16 16" width="12" height="12" fill="none"><path d="m3.5 8.2 2.8 2.7 6.2-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
+            </span>
+            خدمة للمنازل
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">
+              <svg viewBox="0 0 16 16" width="12" height="12" fill="none"><path d="m3.5 8.2 2.8 2.7 6.2-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
+            </span>
+            تواصل مباشر وسهل
+          </li>
+        </ul>
+
+        <div class="contact" aria-label="التواصل">
+          <div class="contact-copy">
+            <span class="contact-label">للحجز والاستفسار</span>
+            <a class="phone" href="tel:0545059396" aria-label="اتصل على 0545059396">0545059396</a>
+          </div>
+          <div class="actions">
+            <a class="button button-call" href="tel:0545059396">
+              <svg viewBox="0 0 20 20" width="18" height="18" fill="none" aria-hidden="true">
+                <path d="M5.3 2.8h2.5l1.3 3.5-1.8 1.5a12 12 0 0 0 4.9 4.9l1.5-1.8 3.5 1.3v2.5a1.5 1.5 0 0 1-1.6 1.5A13.8 13.8 0 0 1 3.8 4.4a1.5 1.5 0 0 1 1.5-1.6Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" />
+              </svg>
+              اتصال الآن
+            </a>
+            <a
+              class="button button-wa"
+              href="https://wa.me/971545059396"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="راسلنا على واتساب"
+            >
+              <svg viewBox="0 0 20 20" width="18" height="18" fill="none" aria-hidden="true">
+                <path d="M16.6 9.7a6.6 6.6 0 0 1-9.8 5.8l-3.4.9.9-3.3a6.6 6.6 0 1 1 12.3-3.4Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                <path d="M7.3 6.9c.2-.4.4-.4.7-.4h.4c.2 0 .3 0 .4.3l.6 1.4c.1.2 0 .4-.1.5l-.5.6c-.1.1-.2.2 0 .4.3.6.9 1.2 1.5 1.6.2.1.3.1.5-.1l.5-.6c.2-.2.3-.2.5-.1l1.3.6c.2.1.3.2.3.3 0 .2-.1.8-.5 1.1-.4.4-1 .6-1.5.5-.5-.1-1.2-.4-2-1-1-.7-1.7-1.6-2-2.1-.4-.6-.7-1.3-.6-1.9.1-.6.4-.9.5-1.1Z" fill="currentColor" />
+              </svg>
+              واتساب
+            </a>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <a
+            class="designer"
+            href="https://wa.me/201029095046"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="تواصل مع المصممة م. نجوى إبراهيم عبر واتساب"
+          >تم التصميم بواسطة م. نجوى إبراهيم</a>
+          <span class="copyright">جميع الحقوق محفوظة ©</span>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
